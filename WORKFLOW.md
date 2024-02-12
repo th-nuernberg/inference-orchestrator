@@ -28,6 +28,9 @@ In this scenario, we outline the workflow for handling a client request when ML-
 
 ![Client Request Flow Diagram](./imgs/WORKFLOW_01.png)
 
+<br/>
+<img src="./imgs/WORKFLOW_01.png" alt="Client Request Flow Diagram - Scenario 1" width="200">
+
 ## Request Handling Workflow - Scenario 2
 
 In this scenario, we outline the workflow for handling a client request when ML-Service 1 is already running.
