@@ -28,7 +28,7 @@ In this scenario, we outline the workflow for handling a client request when ML-
 
 <br/>
 <p align="center">
-   <img src="./imgs/WORKFLOW_01.png" alt="Client Request Flow Diagram - Scenario 1" width="400">
+   <img src="./imgs/WORKFLOW_01.png" alt="Client Request Flow Diagram - Scenario 1" width="600">
 </p>
 
 
