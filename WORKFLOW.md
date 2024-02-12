@@ -26,10 +26,8 @@ In this scenario, we outline the workflow for handling a client request when ML-
    - The Flask app starts the timer for ML-Service 1, defining how long the service will continue to run if no new requests are received.
 
 
-![Client Request Flow Diagram](./imgs/WORKFLOW_01.png)
-
 <br/>
-<img src="./imgs/WORKFLOW_01.png" alt="Client Request Flow Diagram - Scenario 1" width="200">
+<img src="./imgs/WORKFLOW_01.png" alt="Client Request Flow Diagram - Scenario 1" width="400">
 
 ## Request Handling Workflow - Scenario 2
 
