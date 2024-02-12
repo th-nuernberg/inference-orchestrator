@@ -4,8 +4,6 @@ In this document, we describe the workflow of handling client requests in the ML
 
 ## Request Handling Workflow
 
-### 1. Client Request Flow
-
 # Request Handling Workflow - Scenario 1
 
 In this scenario, we outline the workflow for handling a client request when ML-Service 1 is not running.
