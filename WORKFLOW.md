@@ -48,10 +48,10 @@ In this scenario, we outline the workflow for handling a client request when ML-
 4. **Resetting Timer for ML-Service 1**:
    - The timer for ML-Service 1 is reset, indicating that the service is still active and handling requests.
 
-
-
-![Timeout Management Diagram](./imgs/WORKFLOW_02.png)
-
+<br/>
+<p align="center">
+   <img src="./imgs/WORKFLOW_02.png" alt="Client Request Flow Diagram - Scenario 2" width="600">
+</p>
 
 ## Conclusion
 
