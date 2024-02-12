@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ml_service_management:
+    build:
+      context: ./nginx_and_service_management
+    container_name: ml_service_management
+    ports:
+      - "${NGINX_PORT}:${NGINX_LISTEN_PORT}"
+    volumes:
+      - ${ML_SERVICE_SSH_BIND_MOUNT}:/app/ssh
+    env_file:
+      - .env

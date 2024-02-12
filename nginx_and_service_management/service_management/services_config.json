@@ -1,0 +1,51 @@
+{
+    "appPort": 5001,
+    "nginxPort": 8090,
+    "nginxFile": "/app/nginx/nginx.conf_template",
+    "Services":
+    [
+        {
+            "name": "LLM-Vicuna-13b",
+            "ssh_username": "simicch",
+            "ssh_key_file": "/app/ssh/ssh_20221208_cs",
+            "remote_host": "ml1.informatik.fh-nuernberg.de",
+            "remote_port": 8083,
+            "local_host": "localhost",
+            "local_port": 8083,
+            "bash_file": "/nfs/scratch/staff/simicch/03_LLM/01_TGI/text-generation-inference/run_vicuna_portx.sh",
+            "check_health_path": "health",
+            "timeout": 120,
+            "route_name": "llm_service",
+            "api_paths": [
+                "/",
+                "/generate",
+                "/generate_stream",
+                "/health",
+                "/info",
+                "/metrics",
+                "/tokenize",
+                "/chat_completions"
+            ]
+        },
+
+        {
+            "name": "translation_service",
+            "ssh_username": "simicch",
+            "ssh_key_file": "/app/ssh/ssh_20221208_cs",
+            "remote_host": "ml0.informatik.fh-nuernberg.de",
+            "remote_port": 8057,
+            "local_host": "localhost",
+            "local_port": 8057,
+            "bash_file": "/nfs/scratch/staff/simicch/03_LLM/05_translation_service/start_translation_service_ml2.sh",
+            "check_health_path": "check_health",
+            "timeout": 120,
+            "route_name": "translation_service",
+            "api_paths": [
+                "/",
+                "/check_health",
+                "/translate_en2de",
+                "/translate_de2en"
+            ]
+        }
+    ]
+}
