@@ -2,9 +2,7 @@
 
 In this document, we describe the workflow of handling client requests in the ML service management system using Nginx and Flask.
 
-## Request Handling Workflow
-
-# Request Handling Workflow - Scenario 1
+## Request Handling Workflow - Scenario 1
 
 In this scenario, we outline the workflow for handling a client request when ML-Service 1 is not running.
 
@@ -30,9 +28,7 @@ In this scenario, we outline the workflow for handling a client request when ML-
 
 ![Client Request Flow Diagram](./imgs/WORKFLOW_01.png)
 
-### 2. Timeout Management Workflow
-
-# Request Handling Workflow - Scenario 2
+## Request Handling Workflow - Scenario 2
 
 In this scenario, we outline the workflow for handling a client request when ML-Service 1 is already running.
 
