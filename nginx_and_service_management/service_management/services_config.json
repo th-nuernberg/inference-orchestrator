@@ -1,6 +1,4 @@
 {
-    "appPort": 5001,
-    "nginxPort": 8090,
     "nginxFile": "/app/nginx/nginx.conf_template",
     "Services":
     [
