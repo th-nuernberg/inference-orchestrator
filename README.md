@@ -22,15 +22,16 @@ To configure the environment, follow these steps:
 1. Rename the `.env_templates` file to `.env`.
 2. Adjust the environment variables in the `.env` file according to your requirements:
 
+```bash
+NGINX_PORT=8090
+NGINX_LISTEN_PORT=80
+
+ML_SERVICE_FLASK_PORT=5001
+ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
+```
+
+
    ```bash
-   NGINX_PORT=8090
-   NGINX_LISTEN_PORT=80
-
-   ML_SERVICE_FLASK_PORT=5001
-   ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
-
-
-
     git clone https://github.com/th-nuernberg/inference-orchestrator.git
     cd inference-orchestrator
 
