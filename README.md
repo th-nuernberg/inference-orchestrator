@@ -112,6 +112,7 @@ or
 - Send ML service requests to Nginx, which forwards them to the ML-Service URL and Flask for handling.
 - Flask manages the ML services, starting or stopping them as needed.
 - To receive information about all available ML services - http:localhost:8090/info
+- In ./UI/ui.py you find a simple chat app to test ML-Service-Management for a LLAMA based LLM-Service
 
 ## Configuration
 
