@@ -13,7 +13,7 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 - **Slurm Integration**: ML services are managed on a Slurm system, leveraging SSH tunnels for communication and control.
 - **Scalability**: The setup can handle multiple concurrent ML service requests efficiently. (To-Do: Implement load balancing)
 
-## Setup Instructions
+1. ## Setup Instructions
 
    ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
