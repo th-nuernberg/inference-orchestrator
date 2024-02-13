@@ -31,18 +31,23 @@ ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
 ```
 
 
-   ```bash
-    git clone https://github.com/th-nuernberg/inference-orchestrator.git
-    cd inference-orchestrator
+```bash
+git clone https://github.com/th-nuernberg/inference-orchestrator.git
+cd inference-orchestrator
+```
 
-    Start Docker Containers:
+Start Docker Containers:
 
-    docker-compose up -d
-    docker exec ml_service_management service nginx reload
+```bash
+docker-compose up -d
+docker exec ml_service_management service nginx reload
+```
 
-    or 
+or 
 
-    ./start.cmd
+```bash
+./start.cmd
+```
 
 
 ## Access Services
