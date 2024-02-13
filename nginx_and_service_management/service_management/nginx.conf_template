@@ -35,9 +35,24 @@ http {
             index index.html;
         }
 
-        # Info page - Return information about every available Service and its status (To-Do)
+        # Info page
         location /info {
             proxy_pass http://localhost:VAR_FLASK_LISTEN_PORT/get_service_info;
+        }
+
+        # Enable service management
+        location /enable_service_management {
+            proxy_pass http://localhost:VAR_FLASK_LISTEN_PORT/enable_service_management;
+        }
+
+        # Disable service management
+        location /disable_service_management {
+            proxy_pass http://localhost:VAR_FLASK_LISTEN_PORT/disable_service_management;
+        }
+
+        # Kill all Services and disable service management
+        location /kill_disable_service_management {
+            proxy_pass http://localhost:VAR_FLASK_LISTEN_PORT/kill_disable_service_management;
         }
 
 

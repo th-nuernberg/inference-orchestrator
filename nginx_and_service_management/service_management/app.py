@@ -31,10 +31,12 @@ def get_service_info():
     
     for connector in CONNECTOR_LIST:
         status = connector.check_connection()
+        status_service_management_enabled = connector.service_startup_enabled
         status_dict = {
             'started': status[0],
             'running': status[1],
-            'reason': status[2]
+            'reason': status[2],
+            'management_enabled': status_service_management_enabled
         }
         service_data = {
             'service_name': connector.name,
@@ -46,7 +48,23 @@ def get_service_info():
 
 
 
+@app.route('/enable_service_management', methods=['GET'])
+def enable_service_management():
+    for conn in CONNECTOR_LIST:
+        conn.enable_service_startup()
+    return jsonify(message="Service management enabled"), 200
 
+@app.route('/disable_service_management', methods=['GET'])
+def disable_service_management():
+    for conn in CONNECTOR_LIST:
+        conn.disable_service_startup()
+    return jsonify(message="Service management disabled"), 200
+
+@app.route('/kill_disable_service_management', methods=['GET'])
+def kill_disable_service_management():
+    for conn in CONNECTOR_LIST:
+        conn.kill_and_disable_service_startup()
+    return jsonify(message="Service management disabled and all services killed"), 200
 
 
 

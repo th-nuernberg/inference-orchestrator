@@ -41,6 +41,7 @@ class ML_service_connector(ABC):
         self.jobID = None
         self.timer = None
         self.start_time = time.time()
+        self.service_startup_enabled = True
 
     def greet(self) -> None:
         """
@@ -107,6 +108,9 @@ class ML_service_connector(ABC):
         """
         Default implementation to demand a connection.
         """
+        if not self.service_startup_enabled:
+            return False, 'Service startup disabled!'
+
         # Check tunnel - if tunnel is not set, open a tunnel
         if not self.ssh_tunnel:
             self.ssh_tunnel = create_ssh_tunnel(self.ssh_username, self.ssh_key_file, self.remote_host, self.local_port, self.remote_port)
@@ -197,6 +201,17 @@ class ML_service_connector(ABC):
         if self.ssh_tunnel:
             self.ssh_tunnel.kill()
             self.ssh_tunnel = None
+    
+    def enable_service_startup(self):
+        self.service_startup_enabled = True
+    
+    def disable_service_startup(self):
+        self.service_startup_enabled = False
+    
+    def kill_and_disable_service_startup(self) -> Union[str, bool]:
+        self.service_startup_enabled = False
+        resp = self.kill_connection()
+        return resp
 
 
 
