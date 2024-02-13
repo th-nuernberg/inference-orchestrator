@@ -15,7 +15,7 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 ## Setup Instructions
 
-1. **Clone the Repository**: 
+   **Clone the Repository**: 
    ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
    cd inference-orchestrator
@@ -31,9 +31,8 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
     ./start.cmd
 
-Access Services
-
-    Nginx: Access Nginx server at http://localhost:8090 (default configuration).
+###Access Services
+- **Nginx: Access Nginx server at http://localhost:8090 (default configuration).
     Flask: Flask app is available within the Docker container.
 Usage
 
