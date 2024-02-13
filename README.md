@@ -32,18 +32,18 @@ ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
 
 Configure available ML-Service in ./nginx_and_service_management/service_management/services_config.json:
 
-name: Name of Service
-ssh_username: Username for remote ssh connection
-ssh_key_file: path to ssh keyfile (each service can use differenz credentials)
-remote_host: hostname or ip of remote server
-remote_port: Port of Service on remote server
-local_host: usually localhost
-local_port: Port of service on localhost (usually equal to remote_port)
-bash_file: ML-Service bash file that should be executed to start the service
-check_health_path: api endpoint to check service health status
-timeout: timeout duration in seconds
-route_name: Route name for nginx proxy_pass forwarding
-api_paths: list of api endpoints provided by ML-Service
+- name: Name of Service
+- ssh_username: Username for remote ssh connection
+- ssh_key_file: path to ssh keyfile (each service can use differenz credentials)
+- remote_host: hostname or ip of remote server
+- remote_port: Port of Service on remote server
+- local_host: usually localhost
+- local_port: Port of service on localhost (usually equal to remote_port)
+- bash_file: ML-Service bash file that should be executed to start the service
+- check_health_path: api endpoint to check service health status
+- timeout: timeout duration in seconds
+- route_name: Route name for nginx proxy_pass forwarding
+- api_paths: list of api endpoints provided by ML-Service
 
 
 ```bash
