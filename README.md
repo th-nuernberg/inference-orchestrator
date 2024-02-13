@@ -20,8 +20,6 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
     Start Docker Containers:
 
-    bash
-
     docker-compose up -d
     docker exec ml_service_management service nginx reload
 
