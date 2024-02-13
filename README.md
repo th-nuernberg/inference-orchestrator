@@ -114,8 +114,3 @@ or
 - To receive information about all available ML services - http:localhost:8090/info
 - In ./UI/ui.py you find a simple chat app to test ML-Service-Management for a LLAMA based LLM-Service
 
-## Configuration
-
-- docker-compose.yaml: Contains the Docker configuration for Nginx and Flask containers.
-- .env_template: Name should be changed to .env. Contains some environmental  variables.
-- Flask App: Implement ML service management logic within the Flask application.
