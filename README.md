@@ -13,7 +13,7 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 - **Slurm Integration**: ML services are managed on a Slurm system, leveraging SSH tunnels for communication and control.
 - **Scalability**: The setup can handle multiple concurrent ML service requests efficiently. (To-Do: Implement load balancing)
 
-1. ## Setup Instructions
+## Setup Instructions
 
    ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
@@ -30,18 +30,20 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
     ./start.cmd
 
+    ```
+
 ## Access Services
 
-- **Nginx: Access Nginx server at http://localhost:8090 (default configuration).
-    Flask: Flask app is available within the Docker container.
+- **Nginx**: Access Nginx server at http://localhost:8090 (default configuration).
+- **Flask**: Flask app is available within the Docker container.
 Usage
 
-    Send ML service requests to Nginx, which forwards them to the ML-Service URL and Flask for handling.
-    Flask manages the ML services, starting or stopping them as needed.
-    To receive information about all available ML services - http:localhost:8090/info
+- Send ML service requests to Nginx, which forwards them to the ML-Service URL and Flask for handling.
+- Flask manages the ML services, starting or stopping them as needed.
+- To receive information about all available ML services - http:localhost:8090/info
 
 ## Configuration
 
-    docker-compose.yaml: Contains the Docker configuration for Nginx and Flask containers.
-    .env_template: Name should be changed to .env. Contains some environmental  variables.
-    Flask App: Implement ML service management logic within the Flask application.
+- docker-compose.yaml: Contains the Docker configuration for Nginx and Flask containers.
+- .env_template: Name should be changed to .env. Contains some environmental  variables.
+- Flask App: Implement ML service management logic within the Flask application.
