@@ -15,8 +15,7 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 ## Setup Instructions
 
-bash
-
+   ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
    cd inference-orchestrator
 
@@ -30,6 +29,7 @@ bash
     or 
 
     ./start.cmd
+
 
 
 ## Access Services
