@@ -18,7 +18,7 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 1. **Clone the Repository**: 
    ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
-   cd ml-service-management
+   cd inference-orchestrator
 
     Start Docker Containers:
 
