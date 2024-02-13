@@ -15,6 +15,22 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 ## Setup Instructions
 
+**Configuration**
+
+To configure the environment, follow these steps:
+
+1. Rename the `.env_templates` file to `.env`.
+2. Adjust the environment variables in the `.env` file according to your requirements:
+
+   ```bash
+   NGINX_PORT=8090
+   NGINX_LISTEN_PORT=80
+
+   ML_SERVICE_FLASK_PORT=5001
+   ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
+
+
+
     git clone https://github.com/th-nuernberg/inference-orchestrator.git
     cd inference-orchestrator
 
@@ -32,7 +48,8 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 - **Nginx**: Access Nginx server at http://localhost:8090 (default configuration).
 - **Flask**: Flask app is available within the Docker container.
-Usage
+
+## Usage
 
 - Send ML service requests to Nginx, which forwards them to the ML-Service URL and Flask for handling.
 - Flask manages the ML services, starting or stopping them as needed.
