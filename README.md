@@ -30,7 +30,7 @@ ML_SERVICE_FLASK_PORT=5001
 ML_SERVICE_SSH_BIND_MOUNT="./ssh_bind_mnt"
 ```
 
-
+**Download and execute**
 ```bash
 git clone https://github.com/th-nuernberg/inference-orchestrator.git
 cd inference-orchestrator
