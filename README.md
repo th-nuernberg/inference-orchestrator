@@ -15,7 +15,6 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 ## Setup Instructions
 
-   **Clone the Repository**: 
    ```bash
    git clone https://github.com/th-nuernberg/inference-orchestrator.git
    cd inference-orchestrator
@@ -31,7 +30,8 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
     ./start.cmd
 
-###Access Services
+## Access Services
+
 - **Nginx: Access Nginx server at http://localhost:8090 (default configuration).
     Flask: Flask app is available within the Docker container.
 Usage
@@ -40,7 +40,7 @@ Usage
     Flask manages the ML services, starting or stopping them as needed.
     To receive information about all available ML services - http:localhost:8090/info
 
-Configuration
+## Configuration
 
     docker-compose.yaml: Contains the Docker configuration for Nginx and Flask containers.
     .env_template: Name should be changed to .env. Contains some environmental  variables.
