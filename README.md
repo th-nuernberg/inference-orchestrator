@@ -22,6 +22,42 @@ To configure the environment, follow these steps:
 1. Rename the `.env_templates` file to `.env`.
 2. Adjust the environment variables in the `.env` file according to your requirements:
 
+Configure available ML-Service in ./nginx_and_service_management/service_management/services_config.json:
+
+```bash
+{
+    "Services":
+    [
+        {
+            "name": "LLM-Vicuna-13b",
+            "ssh_username": "simicch",
+            "ssh_key_file": "/app/ssh/ssh_20221208_cs",
+            "remote_host": "ml1.informatik.fh-nuernberg.de",
+            "remote_port": 8083,
+            "local_host": "localhost",
+            "local_port": 8083,
+            "bash_file": "/nfs/scratch/staff/simicch/03_LLM/01_TGI/text-generation-inference/run_vicuna_portx.sh",
+            "check_health_path": "health",
+            "timeout": 120,
+            "route_name": "llm_service",
+            "api_paths": [
+                "/",
+                "/generate",
+                "/generate_stream",
+                "/health",
+                "/info",
+                "/metrics",
+                "/tokenize",
+                "/chat_completions"
+            ]
+        }
+    ]
+}
+
+```
+
+
+
 ```bash
 NGINX_PORT=8090
 NGINX_LISTEN_PORT=80
