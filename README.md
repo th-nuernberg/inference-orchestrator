@@ -15,6 +15,24 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
 ## Setup Instructions
 
+**Download and execute**
+```bash
+git clone https://github.com/th-nuernberg/inference-orchestrator.git
+cd inference-orchestrator
+```
+
+Start Docker Containers:
+
+```bash
+docker-compose up -d
+docker exec ml_service_management service nginx reload
+```
+
+or 
+
+```bash
+./start.cmd
+
 **Configuration**
 
 To configure the environment, follow these steps:
@@ -76,29 +94,10 @@ Configure available ML-Service in ./nginx_and_service_management/service_managem
     ]
 }
 
-```
+``````
 
 
 
-
-**Download and execute**
-```bash
-git clone https://github.com/th-nuernberg/inference-orchestrator.git
-cd inference-orchestrator
-```
-
-Start Docker Containers:
-
-```bash
-docker-compose up -d
-docker exec ml_service_management service nginx reload
-```
-
-or 
-
-```bash
-./start.cmd
-```
 
 
 ## Access Services
