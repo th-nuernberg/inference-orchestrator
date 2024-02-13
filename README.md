@@ -32,6 +32,7 @@ or
 
 ```bash
 ./start.cmd
+```
 
 **Configuration**
 
@@ -94,7 +95,7 @@ Configure available ML-Service in ./nginx_and_service_management/service_managem
     ]
 }
 
-``````
+```
 
 
 
