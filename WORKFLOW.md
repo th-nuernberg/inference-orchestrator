@@ -55,9 +55,18 @@ In this scenario, we outline the workflow for handling a client request when ML-
 
 ## Conclusion
 
-Summarize the key points of the request handling workflow and emphasize the benefits of using Nginx and Flask for managing ML services efficiently.
+This Git repository offers a robust solution for efficiently managing ML services on a Slurm system. By leveraging Docker containers to orchestrate Nginx and a Flask app, the platform provides a centralized environment for seamless service management.
+
+Nginx efficiently directs incoming requests to active ML services, ensuring communication between clients and running services. In cases where a requested ML service is not yet running, the Flask app steps in, dynamically running up the service and establishing an SSH tunnel to facilitate communication.
+
+The system implements automated timer management, assigning each ML service a predefined timeout period. Upon expiry, the service is gracefully shut down, and the associated SSH tunnel will be closed, optimizing resource utilization.
+
+The Flask app continuously monitors requests to ML services and resetting timers upon each request to ensure uninterrupted service availability. ML services must be defined manually, the startup and shutdown procedures, is automated.
+
+Through this solution, users can effectively manage and scale ML services, streamlining deployment, ensuring reliability, and maximizing resource efficiency on a Slurm system.
+
 
 ## Next Steps
 
-Consider adding additional diagrams or expanding the description to cover other aspects of the system's functionality or architecture.
+Our next focus for the Git repository includes implementing load balancing between equivalent services. This enhancement will allow the system to handle peaks in incoming requests by dynamically starting multiple instances of a service on different ports. By distributing requests across these instances, we aim to improve system performance and ensure reliability, especially during periods of high demand.
 
