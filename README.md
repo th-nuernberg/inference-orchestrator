@@ -31,10 +31,12 @@ The system comprises a Docker container running Nginx and Flask. Nginx acts as a
 
     ./start.cmd
 
-Access Services:
+Access Services
+
     Nginx: Access Nginx server at http://localhost:8090 (default configuration).
     Flask: Flask app is available within the Docker container.
-Usage:
+Usage
+
     Send ML service requests to Nginx, which forwards them to the ML-Service URL and Flask for handling.
     Flask manages the ML services, starting or stopping them as needed.
     To receive information about all available ML services - http:localhost:8090/info
